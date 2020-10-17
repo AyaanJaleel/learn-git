@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Subject</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id='app'>
+            <h1>{{Subject.title}}</h1>
+            <img v-bind:src = "Subject.image" width=300>
+            <h2>{{Subject.name}}</h2>
+            <p>{{Subject.location}}</p>
+            <p>Price: {{Subject.Price}}</p>
+        </div>
+        <script>
+            var subject = new Vue({
+                el: '#app',
+                data:{
+                    Subject:{
+                        name:'Math',
+                        title:"After School Club",
+                        location:"London",
+                        Price:2000,
+                        image: "https://img-9gag-fun.9cache.com/photo/aOrbwzy_460s.jpg"
+                }
+            }
+        });
+        
+        </script>
+    </body>
+</html>
