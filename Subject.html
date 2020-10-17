@@ -11,7 +11,7 @@
             <p>{{Subject.location}}</p>
             <p>Price: {{Subject.Price}}</p>
             <p>Space: {{Subject.space}}</p>
-            <button>Add to Cart</button>
+            <button v-on:click="addItem">Add to Cart</button>
         </div>
         <script>
             var subject = new Vue({
@@ -26,6 +26,11 @@
                         image: "https://img-9gag-fun.9cache.com/photo/aOrbwzy_460s.jpg"
                 }
             },
+                methods:{
+                    addItem: function(){
+                        this.space--;
+                    }
+                }
         });
         
         </script>
