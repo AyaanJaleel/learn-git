@@ -32,9 +32,15 @@
                 methods:{
                     addItem: function(){
                         var btn = document.getElementById('btn');
+                        var list = document.getElementById('list');
+                        var itemName = this.Subject.name;
                         if(this.Subject.space === 1)
                             btn.disabled = true;
                         this.Subject.space--;
+                        var item = document.createElement('li');
+                        item.innerText = itemName;
+                        list.appendChild(item);
+
                     }
                 }
         });
