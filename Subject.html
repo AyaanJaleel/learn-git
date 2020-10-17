@@ -11,7 +11,10 @@
             <p>{{Subject.location}}</p>
             <p>Price: {{Subject.Price}}</p>
             <p>Space: {{Subject.space}}</p>
-            <button v-on:click="addItem">Add to Cart</button>
+            <button id='btn' v-on:click="addItem">Add to Cart</button>
+            <ul id='list'>
+
+            </ul>
         </div>
         <script>
             var subject = new Vue({
@@ -28,7 +31,10 @@
             },
                 methods:{
                     addItem: function(){
-                        this.space--;
+                        var btn = document.getElementById('btn');
+                        if(this.Subject.space === 1)
+                            btn.disabled = true;
+                        this.Subject.space--;
                     }
                 }
         });
